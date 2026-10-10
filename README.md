@@ -1,5 +1,5 @@
-<<<<<<< HEAD
-\# Tourism Insights — Data Science Internship
+
+# Tourism Insights — Data Science Internship
 
 
 
