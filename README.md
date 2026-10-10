@@ -1,10 +1,6 @@
 
 # Tourism Insights — Data Science Internship
 
-
-
-# Tourism Insights — Data Science Internship
-
 ## Overview
 This repository documents my six-week tourism data science internship, focusing on tourism statistics, exploratory data analysis, trends, and visualizations.
 
