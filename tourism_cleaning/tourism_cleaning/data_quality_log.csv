@@ -1,0 +1,48 @@
+stage,dataset,check,result,detail
+audit,longterm,"million cols == round(exact,2)",FAIL,"5 truncated, 1 unexplained (FTAs 2023: 9.51 vs 9.52)"
+audit,longterm,ITA = FTA + NRI (rows with NRI),PASS,"11 rows tested, max gap 0"
+audit,longterm,ITA != FTA in every year,FAIL,"ITA identical to FTA in 4 rows: [2001, 2011, 2012, 2013]"
+audit,longterm,share-of-world uses one basis for all years,FAIL,implied world total falls 1089M -> 668M on FTA basis in 2014
+audit,longterm,implied INR/USD within 40-90,PASS,range 46.9 - 83.7
+audit,longterm,fee_per_fta recomputes,PASS,
+audit,longterm,fee_per_ita recomputes,PASS,
+audit,monthly,ITA=FTA+NRI 2019,PASS,
+audit,monthly,12-month FTA sum = annual FTA 2019,PASS,"10,930,355 vs 10,930,355"
+audit,monthly,12-month NRI sum = annual NRI 2019,PASS,
+audit,monthly,ITA=FTA+NRI 2023,PASS,
+audit,monthly,12-month FTA sum = annual FTA 2023,PASS,"9,520,928 vs 9,520,928"
+audit,monthly,12-month NRI sum = annual NRI 2023,PASS,
+audit,monthly,ITA=FTA+NRI 2024,PASS,
+audit,monthly,12-month FTA sum = annual FTA 2024,PASS,"9,951,722 vs 9,951,722"
+audit,monthly,12-month NRI sum = annual NRI 2024,PASS,
+audit,monthly,FTA growth col recomputes,PASS,
+audit,monthly,seasonality index mean = 100,PASS,
+audit,regions,regions sum to annual FTA 2019,PASS,
+audit,regions,shares sum to 100 2019,PASS,
+audit,regions,regions sum to annual FTA 2023,PASS,
+audit,regions,shares sum to 100 2023,PASS,
+audit,regions,regions sum to annual FTA 2024,PASS,
+audit,regions,shares sum to 100 2024,PASS,
+audit,countries,shares recompute from FTA totals,PASS,
+audit,countries,rank_2024 is contiguous 1..n,FAIL,max rank 30 with 16 rows
+audit,ports,mode shares sum to 100 (+/-0.05),PASS,max dev 0.01
+audit,ports,port shares sum to 100 (+/-0.05),FAIL,"10/12 years short, range 90.33-96.9"
+audit,global,spend/arrival recomputes,PASS,
+audit,global,one row per entity (no mixed levels),FAIL,"World, region, sub-region and India rows share one table"
+audit,global,India row compares like with like,FAIL,"India row = 20.57M (ITAs), FTAs = 9.95M"
+post,longterm,no duplicate years,PASS,
+post,longterm,ITA=FTA+NRI where comparable,PASS,
+post,longterm,non-comparable ITA rows flagged,PASS,
+post,longterm,share basis labelled for all years,PASS,
+post,monthly,tidy rows = 3 metrics x 3 years x 12 months,PASS,108 rows
+post,monthly,no nulls in tidy table,PASS,
+post,countries,canonical names all mapped to ISO3,PASS,
+post,countries,outlier retained & flagged (not dropped),PASS,
+post,ports,zeros converted to NaN where port not reported,PASS,
+post,ports,residual column makes every year sum to 100,PASS,
+post,global,level column separates World/region/sub/national,PASS,
+post,global,region rows sum to world within 1.1%,PASS,arrivals_2019_m:-0.02%; arrivals_2024_m:-0.01%; receipts_2019_usd_b:1.03%; receipts_2024_usd_b:0.43%
+post,global,sub-region sums match region totals (<=0.2M),PASS,
+post,stress,all injected monthly errors repaired exactly,PASS,
+post,stress,all injected duplicates removed,PASS,
+post,stress,all spelling variants resolved,PASS,

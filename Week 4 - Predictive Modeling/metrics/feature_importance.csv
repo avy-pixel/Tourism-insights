@@ -1,0 +1,13 @@
+Feature,Ridge_Coefficient,RF_Importance
+fta_lag1,313318.39,0.3612
+fta_lag4,135637.82,0.313
+covid_shock,-213156.32,0.1826
+implied_usd_inr,73774.11,0.0488
+fta_lag2,149097.06,0.0449
+world_arr_growth_pct,120012.11,0.015
+q4_dummy,176712.28,0.0126
+covid_lockdown_peak,-157775.99,0.0083
+q2_dummy,-199141.12,0.0073
+q1_dummy,52697.29,0.0036
+recovery_phase,-34126.83,0.0018
+q3_dummy,-30268.45,0.0011

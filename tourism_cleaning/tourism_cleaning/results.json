@@ -1,0 +1,365 @@
+{
+  "profile": [
+    {
+      "file": "india_inbound_longterm",
+      "rows": 15,
+      "cols": 14,
+      "null_cells": 12,
+      "duplicate_rows": 0,
+      "numeric_cols": 14
+    },
+    {
+      "file": "india_fta_monthly",
+      "rows": 12,
+      "cols": 20,
+      "null_cells": 0,
+      "duplicate_rows": 0,
+      "numeric_cols": 18
+    },
+    {
+      "file": "india_fta_regions",
+      "rows": 6,
+      "cols": 9,
+      "null_cells": 0,
+      "duplicate_rows": 0,
+      "numeric_cols": 8
+    },
+    {
+      "file": "india_fta_top_countries",
+      "rows": 16,
+      "cols": 11,
+      "null_cells": 0,
+      "duplicate_rows": 0,
+      "numeric_cols": 10
+    },
+    {
+      "file": "india_fta_ports_modes",
+      "rows": 12,
+      "cols": 11,
+      "null_cells": 0,
+      "duplicate_rows": 0,
+      "numeric_cols": 11
+    },
+    {
+      "file": "global_tourism_trends",
+      "rows": 21,
+      "cols": 14,
+      "null_cells": 0,
+      "duplicate_rows": 0,
+      "numeric_cols": 12
+    }
+  ],
+  "rounding_rule": [
+    {
+      "col": "ftas",
+      "n": 15,
+      "matches_round": 13,
+      "truncated_only": 1,
+      "unexplained": 1
+    },
+    {
+      "col": "nris",
+      "n": 11,
+      "matches_round": 11,
+      "truncated_only": 0,
+      "unexplained": 0
+    },
+    {
+      "col": "itas",
+      "n": 15,
+      "matches_round": 11,
+      "truncated_only": 4,
+      "unexplained": 0
+    }
+  ],
+  "nri_missing_years": [
+    2001,
+    2011,
+    2012,
+    2013
+  ],
+  "nri_missing_n": 4,
+  "n_longterm_rows": 15,
+  "naive_impute": {
+    "mean_share_2014_19": 40.53,
+    "fta_2011": 6309222.0,
+    "reported_ita_2011": 6309222.0,
+    "naive_ita_2011": 10609805,
+    "overstatement_pct": 68.2
+  },
+  "share_basis_test": [
+    {
+      "year": 2019,
+      "world_reported": 1466.0,
+      "implied_fta": 896,
+      "implied_ita": 1468
+    },
+    {
+      "year": 2023,
+      "world_reported": 1306.0,
+      "implied_fta": 656,
+      "implied_ita": 1303
+    },
+    {
+      "year": 2024,
+      "world_reported": 1465.0,
+      "implied_fta": 711,
+      "implied_ita": 1469
+    }
+  ],
+  "share_break": {
+    "share_2013": 0.64,
+    "share_2014": 1.15,
+    "rank_2013": 41,
+    "rank_2014": 24,
+    "jump_pct": 79.7,
+    "implied_world_fta_2013": 1089,
+    "implied_world_fta_2014": 668,
+    "implied_world_ita_2014": 1140
+  },
+  "fee_outlier": {
+    "q1": 2629,
+    "q3": 3349,
+    "lo": 1548,
+    "hi": 4430,
+    "median": 2732,
+    "mad": 167,
+    "flagged": [
+      {
+        "year": 2001,
+        "fee_per_fta_usd": 1260.4,
+        "fee_per_fta_robust_z": -5.9
+      },
+      {
+        "year": 2020,
+        "fee_per_fta_usd": 4749.4,
+        "fee_per_fta_robust_z": 8.1
+      },
+      {
+        "year": 2021,
+        "fee_per_fta_usd": 5664.9,
+        "fee_per_fta_robust_z": 11.8
+      }
+    ]
+  },
+  "monthly_long_shape": [
+    108,
+    7
+  ],
+  "monthly_wide_shape": [
+    12,
+    20
+  ],
+  "country_coverage": {
+    "listed_n": 16,
+    "share_2024": 77.46,
+    "share_2019": 77.48,
+    "share_sum_col": 77.46,
+    "top15_rank_gap": true
+  },
+  "country_outlier": {
+    "q1": 82.4,
+    "q3": 112.8,
+    "lo": 36.8,
+    "hi": 158.4,
+    "flagged": [
+      {
+        "country": "China",
+        "recovery_24_vs_19_pct": 11.5,
+        "ftas_2019": 339442,
+        "ftas_2023": 30585,
+        "ftas_2024": 38960
+      }
+    ]
+  },
+  "rest_of_world": {
+    "country": "All other countries",
+    "ftas_2019": 2461232,
+    "ftas_2023": 2035028,
+    "ftas_2024": 2242715
+  },
+  "port_sum_fail": [
+    {
+      "year": 2014,
+      "port_sum": 96.9
+    },
+    {
+      "year": 2016,
+      "port_sum": 93.0
+    },
+    {
+      "year": 2017,
+      "port_sum": 93.5
+    },
+    {
+      "year": 2018,
+      "port_sum": 93.7
+    },
+    {
+      "year": 2019,
+      "port_sum": 93.6
+    },
+    {
+      "year": 2020,
+      "port_sum": 94.1
+    },
+    {
+      "year": 2021,
+      "port_sum": 90.33
+    },
+    {
+      "year": 2022,
+      "port_sum": 91.0
+    },
+    {
+      "year": 2023,
+      "port_sum": 92.6
+    },
+    {
+      "year": 2024,
+      "port_sum": 92.3
+    }
+  ],
+  "port_years": [
+    2001,
+    2011,
+    2014,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024
+  ],
+  "port_missing_years": [
+    2002,
+    2003,
+    2004,
+    2005,
+    2006,
+    2007,
+    2008,
+    2009,
+    2010,
+    2012,
+    2013,
+    2015
+  ],
+  "zero_evidence": {
+    "haridaspur_zero_years": [
+      2001,
+      2011,
+      2014
+    ],
+    "others_2014": 29.6,
+    "others_2016": 19.2,
+    "hari_2016": 8.6,
+    "bengaluru_zero_years": [
+      2001
+    ]
+  },
+  "naive_sum": {
+    "arrivals_2024": 4314.1,
+    "true_world": 1465.0,
+    "receipts_2024": 5095.4,
+    "true_receipts": 1731.0,
+    "arr_overcount_pct": 194.5
+  },
+  "world_vs_regions": {
+    "arrivals_2019_m": {
+      "world": 1466.0,
+      "regions": 1465.7,
+      "gap_pct": -0.02
+    },
+    "arrivals_2024_m": {
+      "world": 1465.0,
+      "regions": 1464.9,
+      "gap_pct": -0.01
+    },
+    "receipts_2019_usd_b": {
+      "world": 1487.0,
+      "regions": 1502.3,
+      "gap_pct": 1.03
+    },
+    "receipts_2024_usd_b": {
+      "world": 1731.0,
+      "regions": 1738.5,
+      "gap_pct": 0.43
+    }
+  },
+  "hierarchy_check": [
+    {
+      "region": "Europe",
+      "region_total": 755.7,
+      "sub_sum": 755.7,
+      "gap": 0.0
+    },
+    {
+      "region": "Asia and the Pacific",
+      "region_total": 317.5,
+      "sub_sum": 317.5,
+      "gap": 0.0
+    },
+    {
+      "region": "Americas",
+      "region_total": 216.6,
+      "sub_sum": 216.5,
+      "gap": -0.1
+    },
+    {
+      "region": "Africa",
+      "region_total": 73.9,
+      "sub_sum": 73.9,
+      "gap": 0.0
+    },
+    {
+      "region": "Middle East",
+      "note": "no sub-regions supplied"
+    }
+  ],
+  "stress": {
+    "monthly": {
+      "injected": 6,
+      "detected": 6,
+      "detected_idx": [
+        0,
+        2,
+        4,
+        6,
+        9,
+        10
+      ],
+      "recovered_exact": 6,
+      "max_abs_error_after": 0,
+      "types": {
+        "2": "null",
+        "6": "null",
+        "9": "null",
+        "4": "x1000 unit error",
+        "10": "negative",
+        "0": "text 'N/A'"
+      }
+    },
+    "countries": {
+      "duplicates_injected": 3,
+      "duplicates_removed": 3,
+      "variants_injected": 7,
+      "variants_resolved": 7,
+      "unmapped": 0
+    }
+  },
+  "log_counts": {
+    "audit": {
+      "FAIL": 7,
+      "PASS": 24
+    },
+    "post": {
+      "FAIL": 0,
+      "PASS": 16
+    }
+  },
+  "log_total": 47
+}

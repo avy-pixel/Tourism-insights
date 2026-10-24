@@ -1,0 +1,282 @@
+{
+  "models_evaluated": [
+    "Naive Seasonal Drift",
+    "Holt-Winters",
+    "SARIMA",
+    "SARIMAX (Exog)",
+    "Ridge Regression",
+    "ElasticNet",
+    "Random Forest",
+    "Gradient Boosting",
+    "Blended Hybrid Ensemble"
+  ],
+  "benchmark_metrics": [
+    {
+      "Model": "Ridge Regression",
+      "MAE": 147780.88,
+      "RMSE": 177743.4,
+      "MAPE_pct": 5.81,
+      "R2": 0.8023,
+      "MDA_pct": 100.0
+    },
+    {
+      "Model": "Blended Hybrid Ensemble",
+      "MAE": 166639.38,
+      "RMSE": 221452.56,
+      "MAPE_pct": 6.21,
+      "R2": 0.6931,
+      "MDA_pct": 100.0
+    },
+    {
+      "Model": "ElasticNet",
+      "MAE": 184367.75,
+      "RMSE": 231521.46,
+      "MAPE_pct": 7.0,
+      "R2": 0.6645,
+      "MDA_pct": 100.0
+    },
+    {
+      "Model": "SARIMA",
+      "MAE": 259904.75,
+      "RMSE": 319679.22,
+      "MAPE_pct": 9.78,
+      "R2": 0.3604,
+      "MDA_pct": 85.71
+    },
+    {
+      "Model": "Holt-Winters",
+      "MAE": 332926.75,
+      "RMSE": 344502.4,
+      "MAPE_pct": 13.74,
+      "R2": 0.2572,
+      "MDA_pct": 85.71
+    },
+    {
+      "Model": "Random Forest",
+      "MAE": 246327.25,
+      "RMSE": 373615.77,
+      "MAPE_pct": 10.2,
+      "R2": 0.1264,
+      "MDA_pct": 85.71
+    },
+    {
+      "Model": "Gradient Boosting",
+      "MAE": 517861.38,
+      "RMSE": 603638.35,
+      "MAPE_pct": 20.35,
+      "R2": -1.2804,
+      "MDA_pct": 57.14
+    },
+    {
+      "Model": "Naive Seasonal Drift",
+      "MAE": 399090.12,
+      "RMSE": 658629.19,
+      "MAPE_pct": 16.2,
+      "R2": -1.7148,
+      "MDA_pct": 85.71
+    },
+    {
+      "Model": "SARIMAX (Exog)",
+      "MAE": 731322.62,
+      "RMSE": 859189.5,
+      "MAPE_pct": 29.16,
+      "R2": -3.62,
+      "MDA_pct": 57.14
+    }
+  ],
+  "walk_forward_cv": [
+    {
+      "Fold": 1,
+      "Train_Quarters": 8,
+      "Val_Quarters": 8,
+      "Ridge_MAPE": 10.32,
+      "SARIMA_MAPE": 14.25,
+      "RF_MAPE": 9.78,
+      "Hybrid_MAPE": 3.13
+    },
+    {
+      "Fold": 2,
+      "Train_Quarters": 16,
+      "Val_Quarters": 8,
+      "Ridge_MAPE": 8.8,
+      "SARIMA_MAPE": 8.04,
+      "RF_MAPE": 17.79,
+      "Hybrid_MAPE": 6.55
+    },
+    {
+      "Fold": 3,
+      "Train_Quarters": 24,
+      "Val_Quarters": 8,
+      "Ridge_MAPE": 21.78,
+      "SARIMA_MAPE": 3.95,
+      "RF_MAPE": 25.63,
+      "Hybrid_MAPE": 16.64
+    },
+    {
+      "Fold": 4,
+      "Train_Quarters": 32,
+      "Val_Quarters": 8,
+      "Ridge_MAPE": 2388.39,
+      "SARIMA_MAPE": 1814.45,
+      "RF_MAPE": 1847.94,
+      "Hybrid_MAPE": 305.18
+    },
+    {
+      "Fold": 5,
+      "Train_Quarters": 40,
+      "Val_Quarters": 8,
+      "Ridge_MAPE": 100.09,
+      "SARIMA_MAPE": 1433.54,
+      "RF_MAPE": 134.84,
+      "Hybrid_MAPE": 415.29
+    }
+  ],
+  "residual_diagnostics": {
+    "Ridge_Regression": {
+      "Durbin_Watson": 1.468,
+      "Jarque_Bera_Stat": 0.592,
+      "Jarque_Bera_pValue": 0.7437,
+      "Ljung_Box_Lag2_pValue": 0.1279,
+      "Ljung_Box_Lag4_pValue": 0.1048
+    },
+    "Blended_Hybrid_Ensemble": {
+      "Durbin_Watson": 0.917,
+      "Jarque_Bera_Stat": 0.639,
+      "Jarque_Bera_pValue": 0.7267,
+      "Ljung_Box_Lag2_pValue": 0.1271,
+      "Ljung_Box_Lag4_pValue": 0.0978
+    },
+    "SARIMA": {
+      "Durbin_Watson": 0.726,
+      "Jarque_Bera_Stat": 0.454,
+      "Jarque_Bera_pValue": 0.797
+    }
+  },
+  "feature_importances": [
+    {
+      "Feature": "fta_lag1",
+      "Ridge_Coefficient": 313318.39,
+      "RF_Importance": 0.3612
+    },
+    {
+      "Feature": "fta_lag4",
+      "Ridge_Coefficient": 135637.82,
+      "RF_Importance": 0.313
+    },
+    {
+      "Feature": "covid_shock",
+      "Ridge_Coefficient": -213156.32,
+      "RF_Importance": 0.1826
+    },
+    {
+      "Feature": "implied_usd_inr",
+      "Ridge_Coefficient": 73774.11,
+      "RF_Importance": 0.0488
+    },
+    {
+      "Feature": "fta_lag2",
+      "Ridge_Coefficient": 149097.06,
+      "RF_Importance": 0.0449
+    },
+    {
+      "Feature": "world_arr_growth_pct",
+      "Ridge_Coefficient": 120012.11,
+      "RF_Importance": 0.015
+    },
+    {
+      "Feature": "q4_dummy",
+      "Ridge_Coefficient": 176712.28,
+      "RF_Importance": 0.0126
+    },
+    {
+      "Feature": "covid_lockdown_peak",
+      "Ridge_Coefficient": -157775.99,
+      "RF_Importance": 0.0083
+    },
+    {
+      "Feature": "q2_dummy",
+      "Ridge_Coefficient": -199141.12,
+      "RF_Importance": 0.0073
+    },
+    {
+      "Feature": "q1_dummy",
+      "Ridge_Coefficient": 52697.29,
+      "RF_Importance": 0.0036
+    },
+    {
+      "Feature": "recovery_phase",
+      "Ridge_Coefficient": -34126.83,
+      "RF_Importance": 0.0018
+    },
+    {
+      "Feature": "q3_dummy",
+      "Ridge_Coefficient": -30268.45,
+      "RF_Importance": 0.0011
+    }
+  ],
+  "annual_scenario_projections": [
+    {
+      "scenario": "Baseline",
+      "year": 2025,
+      "projected_fta": 10159096,
+      "fee_usd_million": 36818.1,
+      "fee_inr_crore": 312051.3
+    },
+    {
+      "scenario": "Baseline",
+      "year": 2026,
+      "projected_fta": 10221462,
+      "fee_usd_million": 38155.4,
+      "fee_inr_crore": 331022.9
+    },
+    {
+      "scenario": "Baseline",
+      "year": 2027,
+      "projected_fta": 10254950,
+      "fee_usd_million": 39428.700000000004,
+      "fee_inr_crore": 349958.1
+    },
+    {
+      "scenario": "Optimistic",
+      "year": 2025,
+      "projected_fta": 10925810,
+      "fee_usd_million": 39596.7,
+      "fee_inr_crore": 333637.5
+    },
+    {
+      "scenario": "Optimistic",
+      "year": 2026,
+      "projected_fta": 11379800,
+      "fee_usd_million": 42479.4,
+      "fee_inr_crore": 366423.7
+    },
+    {
+      "scenario": "Optimistic",
+      "year": 2027,
+      "projected_fta": 11598992,
+      "fee_usd_million": 44596.5,
+      "fee_inr_crore": 393598.7
+    },
+    {
+      "scenario": "Pessimistic",
+      "year": 2025,
+      "projected_fta": 9306053,
+      "fee_usd_million": 33726.5,
+      "fee_inr_crore": 291731.6
+    },
+    {
+      "scenario": "Pessimistic",
+      "year": 2026,
+      "projected_fta": 9144910,
+      "fee_usd_million": 34136.7,
+      "fee_inr_crore": 308966.8
+    },
+    {
+      "scenario": "Pessimistic",
+      "year": 2027,
+      "projected_fta": 9154464,
+      "fee_usd_million": 35197.6,
+      "fee_inr_crore": 332656.8
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "Ridge_Regression": {
+    "Durbin_Watson": 1.468,
+    "Jarque_Bera_Stat": 0.592,
+    "Jarque_Bera_pValue": 0.7437,
+    "Ljung_Box_Lag2_pValue": 0.1279,
+    "Ljung_Box_Lag4_pValue": 0.1048
+  },
+  "Blended_Hybrid_Ensemble": {
+    "Durbin_Watson": 0.917,
+    "Jarque_Bera_Stat": 0.639,
+    "Jarque_Bera_pValue": 0.7267,
+    "Ljung_Box_Lag2_pValue": 0.1271,
+    "Ljung_Box_Lag4_pValue": 0.0978
+  },
+  "SARIMA": {
+    "Durbin_Watson": 0.726,
+    "Jarque_Bera_Stat": 0.454,
+    "Jarque_Bera_pValue": 0.797
+  }
+}
