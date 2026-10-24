@@ -193,13 +193,18 @@ def add_code_block(code_text, caption=None):
     doc.add_paragraph().paragraph_format.space_after = Pt(4)
 
 def add_figure_image(img_path, caption):
-    if Path(img_path).exists():
+    # Prefer optimized .jpg to stay strictly under the 2048 KB portal limit
+    p_path = Path(img_path)
+    jpg_path = p_path.with_suffix('.jpg')
+    target_path = jpg_path if jpg_path.exists() else p_path
+    
+    if target_path.exists():
         p_img = doc.add_paragraph()
         p_img.alignment = WD_ALIGN_PARAGRAPH.CENTER
         p_img.paragraph_format.space_before = Pt(8)
         p_img.paragraph_format.space_after = Pt(4)
         run = p_img.add_run()
-        run.add_picture(str(img_path), width=Inches(6.3))
+        run.add_picture(str(target_path), width=Inches(6.3))
         
         p_cap = doc.add_paragraph()
         p_cap.alignment = WD_ALIGN_PARAGRAPH.CENTER
