@@ -1,0 +1,4 @@
+Sentiment Class,Precision (%),Recall (%),F1-Score (%),Support (Test Count)
+Negative,100.0,100.0,100.0,120
+Neutral,86.49,97.96,91.87,98
+Positive,99.26,94.68,96.91,282
